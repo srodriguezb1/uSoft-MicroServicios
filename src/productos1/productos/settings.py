@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'productos.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'produc',
+	'USER': 'produc',
+	'PASSWORD':'1234',
+	'HOST':'35.153.159.229',
+	'PORT':'5432',
     }
 }
 
