@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'facturas.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'fact',
+        'USER': 'fact',
+        'PASSWORD':'1234',
+        'HOST':'54.165.160.218',
+        'PORT':'5432',
     }
 }
 
