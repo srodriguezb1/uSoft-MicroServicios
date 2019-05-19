@@ -24,3 +24,8 @@ def VentaCreate(request):
         variable.total = data_json["total"]
         variable.save()
         return HttpResponse("successfully created variable")
+
+
+def pedirInfo(request):
+    if request.method == 'GET':
+        return HttpResponse("hola Nik ventas")

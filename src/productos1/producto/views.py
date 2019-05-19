@@ -30,3 +30,8 @@ def MeasurementCreate(request):
         return HttpResponse("Producto creado")
     else:
         return HttpResponse("unsuccessfully created measurement. Variable does not exist")
+
+
+def pedirInfo(request):
+    if request.method == 'GET':
+        return HttpResponse("hola Nik productos")
