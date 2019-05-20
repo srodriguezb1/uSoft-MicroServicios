@@ -4,3 +4,5 @@ from django.db import models
 
 class Venta(models.Model):
     total = models.IntegerField()
+    facturaId = models.IntegerField()
+    productoId = models.IntegerField()

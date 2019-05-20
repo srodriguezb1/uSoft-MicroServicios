@@ -9,11 +9,16 @@ from cryptography.fernet import Fernet
 import hmac
 import hashlib
 import base64
+from urllib.request import urlopen
 
 from django.http import HttpResponse
 
 
 def Solicitar_reporte(request):
+    url = 'http://3.91.236.55:8000/ventas/ventasList'
+
+    page = urlopen(url)
+
     # model = Reporte
     # model.traerBaseDatos(model)
     global reporte

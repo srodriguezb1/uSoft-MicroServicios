@@ -25,7 +25,7 @@ SECRET_KEY = 'gdk#t(-#jt1x-q21vis7)$f5npqn@9lm3j(7(ac5ts-0*pinzo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
