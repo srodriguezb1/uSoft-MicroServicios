@@ -15,7 +15,7 @@ from django.http import HttpResponse
 
 
 def Solicitar_reporte(request):
-    url = 'http://3.91.236.55:8000/ventas/ventasList'
+    url = 'http://3.85.171.209:8000/ventas/ventasList'
 
     page = urlopen(url)
 
