@@ -34,4 +34,8 @@ def MeasurementCreate(request):
 
 def pedirInfo(request):
     if request.method == 'GET':
-        return HttpResponse("hola Nik productos")
+        temp = Producto.objects.all()
+        resp = ""
+        for i in temp:
+            resp += str(i.idT) + ";;" + str(i.nombre) + "///"
+        return HttpResponse(resp)
