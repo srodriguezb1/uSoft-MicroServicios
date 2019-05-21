@@ -13,7 +13,7 @@ import json
 
 def VentasList(request):
     queryset = Venta.objects.all()
-    context = list(queryset.values('id', 'total'))
+    context = list(queryset.values('id', 'total','facturaId','productoId'))
     return JsonResponse(context, safe=False)
 
 def VentaCreate(request):
@@ -22,6 +22,8 @@ def VentaCreate(request):
         data_json = json.loads(data)
         variable = Venta()
         variable.total = data_json["total"]
+        variable.facturaId = data_json["facturaId"]
+        variable.productoId = data_json["productoId"]
         variable.save()
         return HttpResponse("successfully created variable")
 
