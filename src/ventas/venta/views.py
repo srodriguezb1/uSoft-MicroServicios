@@ -28,4 +28,9 @@ def VentaCreate(request):
 
 def pedirInfo(request):
     if request.method == 'GET':
-        return HttpResponse("hola Nik ventas")
+        # model = Reporte
+        temp = Venta.objects.all()
+        resp = ""
+        for i in temp:
+            resp += str(i.total) + ";;" + str(i.facturaId) + ";;" + str(i.productoId) + "///"
+        return HttpResponse(resp)
