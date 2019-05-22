@@ -16,7 +16,7 @@ def ProductosList(request):
     context = list(queryset.values('id', 'nombre', 'idT', 'fechaV', 'precio', 'cantidad'))
     return JsonResponse(context, safe=False)
 
-def MeasurementCreate(request):
+def ProductosCreate(request):
     if request.method == 'POST':
         data = request.body.decode('utf-8')
         data_json = json.loads(data)
